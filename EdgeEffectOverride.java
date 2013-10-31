@@ -24,6 +24,8 @@ import android.view.LayoutInflater;
  * <li>{@code EdgeEffectOverride.createContextThemeWrapper(context, themeResId, color); }</li>
  * </ul>
  * 
+ * @see {@link android.widget.EdgeEffect}
+ * 
  * @author  Simon Lightfoot <simon@demondevelopers.com>
  * @since   30/10/2013
  * @version 1.4
@@ -141,13 +143,15 @@ public class EdgeEffectOverride
 			return mResources;
 		}
 		
+		/**
+		 * Required so that the LayoutInflater uses this context to resolve resources.
+		 */
 		@Override
 		public Object getSystemService(String name)
 		{
 			if(LAYOUT_INFLATER_SERVICE.equals(name)){
 				if(mInflater == null){
-					mInflater = LayoutInflater.from(getBaseContext())
-						.cloneInContext(this);
+					mInflater = LayoutInflater.from(getBaseContext()).cloneInContext(this);
 				}
 				return mInflater;
 			}
