@@ -15,7 +15,7 @@ Can be simply applied with.
 * ```EdgeEffectOverride.createContextThemeWrapper(context, themeResId, color);```
 
 If you want to apply the change Activity wide use:
-```
+```java
 @Override
 protected void attachBaseContext(Context newBase)
 {
