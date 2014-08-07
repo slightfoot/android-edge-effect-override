@@ -14,5 +14,14 @@ Can be simply applied with.
 * ```EdgeEffectOverride.createContextWrapper(context, color);```
 * ```EdgeEffectOverride.createContextThemeWrapper(context, themeResId, color);```
 
+If you want to apply the change Activity wide use:
+```
+@Override
+protected void attachBaseContext(Context newBase)
+{
+    super.attachBaseContext(EdgeEffectOverride.createContextWrapper(newBase,
+        newBase.getResources().getColor(R.color.your_color)));
+}
+```
 
 <img src="https://raw.github.com/slightfoot/android-edge-effect-override/master/Example.png" alt="Example" width="360" />
