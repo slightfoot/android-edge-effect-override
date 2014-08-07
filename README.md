@@ -10,9 +10,14 @@ Enables you to override the color of the [Edge Effects](https://github.com/andro
 > Version 1.4
 
 
-Can be simply applied with.
-* ```EdgeEffectOverride.createContextWrapper(context, color);```
-* ```EdgeEffectOverride.createContextThemeWrapper(context, themeResId, color);```
+Can be simply applied with either.
+```java
+EdgeEffectOverride.createContextWrapper(context, color);
+```
+or...
+```java
+EdgeEffectOverride.createContextThemeWrapper(context, themeResId, color);
+```
 
 If you want to apply the change Activity wide use:
 ```java
