@@ -19,7 +19,7 @@ or...
 EdgeEffectOverride.createContextThemeWrapper(context, themeResId, color);
 ```
 
-If you want to apply the effect Activity wide use:
+If you want to apply the effect Activity wide add this method or similar to your Activity's class:
 ```java
 @Override
 protected void attachBaseContext(Context newBase)
